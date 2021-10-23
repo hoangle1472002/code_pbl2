@@ -1,3 +1,8 @@
+#include<iostream>
+#include<iomanip>
+#include<ctime>
+#include<time.h>
+using namespace std;
 class Date
 {
 private:
@@ -7,6 +12,9 @@ private:
 
 public:
     Date();
-    Date(int, int, int);
+    Date(int day, int month, int year);
     ~Date();
+    static int TinhNgayLamViecThangHTai();
+    friend ostream& operator<<(ostream& out,const Date& d);
+    friend istream& operator>>(istream& in,Date& d);
 };
