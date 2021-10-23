@@ -3,16 +3,13 @@
 using namespace std;
 class Staff
 {
-private:
-    string IDStaff;
-    string Staffname;
-    Date Daystart;
-    string Sex;
 protected:
+    string IDStaff;
+    string Name;
+    Date Daystart;
+    bool Sex;
     double Salary;
 public:
-    Staff();
-    Staff(string,string,Date,string,double);
-    ~Staff();
-    void set_salary(Staff_NVHD);
+    virtual ~Staff();
+    virtual void kindof_Staff();
 };
